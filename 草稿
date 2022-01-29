@@ -1,0 +1,63 @@
+#include<stdio.h>
+#define N 100010
+int e[N], ne[N], head,i;
+void init()
+{
+	head = -1;
+	i = 0;
+}
+void head_insert(int x)
+{
+	e[i] = x;
+	ne[i] = head;
+	head = i++;
+}
+void insert(int k, int x)
+{
+	e[i] = x;
+	ne[i] = ne[k];
+	ne[k] = i++;
+}
+void remove(int k)
+{
+	ne[k] = ne[ne[k]];
+}
+
+int main()
+{
+	int M;
+	scanf("%d", &M);
+	init();
+	int T = 0;
+	while (M--)
+	{
+		getchar();
+		char a; scanf("%c", &a);
+		if (a == 'H')
+		{
+			int x; scanf("%d", &x);
+			head_insert(x);
+			T++;
+		}
+		else if (a == 'I')
+		{
+			int k, x;
+			scanf("%d%d", &k, &x);
+			insert(k-1, x);
+			T++;
+		}
+		else if (a == 'D')
+		{
+			int  k;
+			scanf("%d", &k);
+			if (!k)
+				head = ne[head];
+			else
+				remove(k-1);
+			T--;
+		}
+	}
+	for (int t = head; t!=-1; t=ne[t])
+		printf("%d ",e[t]);
+	return 0;
+}
