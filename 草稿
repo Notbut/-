@@ -118,3 +118,112 @@ int main()
 	printf("%d", res);
 	return 0;
 }
+//
+//#include<stdio.h>
+//
+//#define N  20
+//char g[N][N];
+//int row[N], dg[N], udg[N], n;
+//void My_DFS(int u)
+//{
+//	if (u > n)
+//	{
+//		for (int i = 1; i <= n; i++)
+//		{
+//			for (int j = 1; j <= n; j++)
+//				printf("%c", g[i][j]);
+//			printf("\n");
+//		}
+//		printf("\n");
+//		return;
+//	}
+//	for (int i = 1; i <= n; i++)
+//	{
+//		if (!row[i] && !dg[u + i] && !udg[n - u + i])
+//		{
+//			g[u][i] = 'Q';
+//			row[i] = dg[u + i] = udg[n - u + i] = 1;
+//			My_DFS(u + 1);
+//			row[i] = dg[u + i] = udg[n - u + i] = 0;
+//			g[u][i]='.';
+//		}
+//	}
+//}
+//int main()
+//{
+//	scanf("%d", &n);
+//	for (int i = 1; i <= n; i++)
+//		for (int j = 1; j <= n; j++)
+//			g[i][j] = '.';
+//	My_DFS(1);
+//	return 0;
+//}
+
+//#include<string.h>
+//#include<stdio.h>
+//
+//#define N 105
+//int q[N][N], d[N][N],mk[N*N][2];
+//int m, n; int btx[N], bty[N];
+//
+//void bfs()
+//{
+//	int hh = 0, tt = 0;
+//	int dx[4] = { -1,0,1,0 }; int dy[4] = { 0,1,0,-1 };
+//	d[0][0] = 0;
+//	while (hh <= tt)
+//	{
+//		for (int i = 3; i>=0; i--)
+//		{
+//			int x = dx[i] + mk[hh][0], y = dy[i] + mk[hh][1];
+//			if (x >= 0 && x < n && y >= 0 && y < m && d[x][y] == -1 && q[x][y] == 0)
+//			{
+//				d[x][y] = d[mk[hh][0]][mk[hh][1]] + 1;
+//				mk[++tt][0] = x; mk[tt][1] = y;
+//			}
+//		}
+//		hh++;
+//	}
+//	printf("%d", d[n - 1][m - 1]);
+//}
+//int main()
+//{
+//	memset(d, -1, sizeof d);
+//	scanf("%d%d", &n, &m);
+//	for (int i = 0; i < n; i++)
+//		for (int j = 0; j < m; j++)
+//			scanf("%d", &q[i][j]);
+//	bfs();
+//	return 0;
+//}
+
+
+//#include <stdio.h>
+//#include <stdlib.h>
+//int a[1000000], b[1000000], c[2000000];
+//int main()
+//{
+//	int m, n, i, j, k = 0;
+//	scanf("%d", &m);
+//	for (i = 0; i < m; i++)
+//		scanf("%d", &a[i]);
+//	scanf("%d", &n);
+//	for (j = 0; j < n; j++)
+//		scanf("%d", &b[j]);
+//	i = m - 1, k = 0, j = 0;
+//	while (i >= 0||j < n)
+//	{
+//		if (a[i] >= b[j])
+//			c[k++] = a[i--];
+//		else
+//			c[k++] = b[j++];
+//	}
+//	while (i>=0)
+//		c[k++] = a[i--];
+//	while (j < n )
+//		c[k++] = b[j++];
+//	for (i = 0; i < k; i++)
+//		printf("%d", c[i]);
+//	return 0;
+//}
+
