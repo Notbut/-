@@ -145,6 +145,80 @@ int bsearch_2(int l, int r)
 
 
 <浮点数二分>
+#include<stdio.h>
+double x;
+double bsearch(double l, double r)
+{
+	double mid;
+	while (r - l > 1e-8)//这里的精度一般比题目中的大2
+	{
+		mid = (l + r) / 2;
+		if (mid*mid*mid > x)//是几分就乘以几个mid
+			r = mid;
+		else
+			l = mid;
+	}
+	return mid;//输出l，r，mid都可以
+}
+int main()
+{
+	scanf("%lf", &x);
+	printf("%.6f", bsearch(-10000, 10000));
+	return 0;
+}
+
+Num3---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -
+《高精度》
+<A + B>
+#include<stdio.h>
+char ch1[100010], ch2[100010], ch3[100010];
+void my_strrev(int l, int r)
+{
+	while (l < r)
+	{
+		char tem = ch2[l];
+		ch2[l] = ch2[r];
+		ch2[r] = tem;
+		l++, r--;
+	}
+}
+int main()
+{
+	scanf("%s%s", ch1, ch2);
+	int len1 = strlen(ch1), len2 = strlen(ch2);//求A和B长度
+	int r = len1 - 1, l = 0;
+
+	//逆序便于从个位开始
+	my_strrev(0, len1 - 1);
+	my_strrev(0, len2 - 1);
+
+	//将字符数字转化为整形
+	for (int i = 0, j = len1; i < j; i++)
+		ch1[i] -= '0';
+	for (int i = 0, j = len2; i < j; i++)
+		ch2[i] -= '0';
+
+	//计算
+	int i = 0, t = 0;
+	for (; i < len1 || i < len2; i++)
+	{
+		ch3[i] = (t + ch1[i] + ch2[i]) % 10;
+		t = (t + ch1[i] + ch2[i]) / 10;
+	}
+
+	//先输出最高位，若为0不输出
+	if (t)
+		printf("%d", t);
+
+	//输出
+	for (i--; i >= 0; i--)
+		printf("%d", ch3[i]);
+	return 0;
+}
+
+
+<A - B>
+
 
 
 
