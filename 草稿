@@ -310,3 +310,180 @@ int main()
 	return 0;
 }
 
+<!DOCTYPE html>
+
+<html lang="zh-CN" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>我要笑了</title>
+</head>
+<body>
+
+
+    <!--文章
+    <h1>写代码快乐</h1>
+    <h1>xiedaimakuaile</h1>
+    <p>今天建了一个博客我很开心<br />哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</p>
+    <p>明天学习高数呜呜呜呜呜呜呜呜呜呜呜五五五五五五五五</p>
+    <p>后天考试哎哎哎i啊爱爱爱爱</p>
+    我是<strong>加粗</strong>的文字
+    我是<b>加粗</b>的文字
+    我是<em>倾斜</em>的文字
+    我是<i>倾斜</i>的文字
+    我是<del>删除</del>的文字
+    我也是<s>删除</s>的文字
+    我是<ins>下划线</ins>
+    我也是<u>下划线</u>
+    <div>大盒子,我是一个div标签我一个人独占一行</div>
+    被发现了
+    <span>GitHub</span>
+    <span>bilibili</span>
+    <span>QQ</span>
+
+
+    <h3>图片标签的使用:</h3>
+    <img src="7495.jpg" />
+    <img src="edg" alt="艺术是爆炸" />
+    <h4></h4>
+    <img src="7495.jpg" alt="你想起舞吗" title="我不会" width="1000" />
+    <img src="7495.jpg" width="500" height="200" />
+    <h4>像素宽度</h4>
+    alt:图片无法显示时，就会把文本显示出来
+    <img src="7495.jpg" width="500" height="200" border="0" />
+
+    文件夹路径
+    目录文件夹:就是普通文件夹<br />
+    根目录:打开文件夹的第一层目录 <br />
+    相对路径:
+    <img src="7495.jpg" /><br />
+    下一级路径
+    <img src="img /7495.jpg" /><br />
+    上一级路径
+    <img scr="../baidu.gif" /><br />
+    绝对路径:
+    通常从盘符开始,不是每个人的电脑都一样因此不经常使用
+    <img src="D:web\img\jpg" />
+    或<img src="http://www.nutbut" />
+
+
+
+
+    <br />超链接标签<br />
+    <a href="跳转目标" target="目标窗口弹出方式   有四种  "></a>
+    1.内部链接
+    <a href="index. html">首页</a>
+    2.外部链接
+    <a href="http://www.qq.com" target="_self">腾讯</a>
+    3.下载链接 文件或压缩包 .exe zip
+    <a href="img.zip" />
+    4.空链接
+    <a href="#" />
+    5.网页文件链接:文本 图像 表格 音频 视频
+    <a href="http://www.baidu.com"><img src="img.jpg" /></a>
+    6.锚点链接:两个在一起使用
+    <a href="#zuopin">主要作品</a>
+    <h3 id="zuopin">主要作品</h3>
+
+    HTML中的注释和特殊字符<br />
+    1.注释<br />
+    2.特殊字符<br />
+    空格:&nbsp;
+    小于号:&lt;
+    大于号   :&gt;-->
+
+
+
+    <!--<h1>表格</h1>
+    <table align="center" border="1" cellpadding="20" cellspacing="0" width="500" height="250">
+        <tr>
+            <th>姓名</th>
+            <th>性别</th>
+            <th>年龄</th>
+        </tr>
+
+        <tr>
+            <td>刘德华</td>
+            <td>男</td>
+            <td>56</td>
+        </tr>
+
+        <tr>
+            <td>张三</td>
+            <td>10</td>
+            <td>女</td>
+        </tr>
+    </table>
+
+    align: left right center 表格对周围元素的对齐方式<br />
+    border: 1或"" 是否有边框<br />
+    cellpadding: 内容与单元格之间的距离<br />
+    cellspacing: 单元格和单元格之间的距离<br />
+    width: <br />
+    height:<br />
+
+    <h2>表格实战</h2>
+    <table border="1" cellspacing="0" align="center" height="300" width="500">
+        <thead>
+            <tr>
+                <th>排名</th>
+                <th>关键词</th>
+                <th>趋势</th>
+                <th>今日搜索</th>
+                <th>最近七日</th>
+                <th>相关链接</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>鬼吹灯</td>
+                <td><img src="down.jpg" /></td>
+                <td>132</td>
+                <td>565465454564554</td>
+                <td><a href="#">贴吧</a></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>西游记</td>
+                <td><img src="down.jpg" /></td>
+                <td>13442</td>
+                <td>565544</td>
+                <td><a href="#">贴吧</a></td>
+            </tr>
+        </tbody>
+    </table>
+    <h2>合并单元格</h2>
+    跨行合并：rowspan=“合并单元格的个数”<br />
+    跨列合并：colspan=“合并单元格的个数”<br />
+    <table border="1" cellspacing="0" height="300" width="500">
+        <thead>
+            <tr>
+                <th>kk</th>
+                <th colspan="2"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2"></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>-->
+    
+
+    <h1>列表</h1>
+    表格：显示数据<br />
+    列表：布局<br />
+    <h2>无序列表</h2>
+    <ul>
+        <li>列表项1</li>
+        <li>列表项2</li>
+        <li>列表项3</li>
+    </ul>
+</body>
+</htm
